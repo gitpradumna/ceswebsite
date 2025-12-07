@@ -1,0 +1,32 @@
+import React from 'react'
+import './Hero.css'
+import dark_arrow from '../../assets/dark-arrow.png'
+import { Link } from 'react-scroll'
+
+const Hero = () => {
+  return (
+    <div className='hero container'>
+      <div className="hero-text">
+        <div className="hero-badge">Civil Engineering Society</div>
+        <h1>Building Tomorrow's</h1>
+        <h1>Infrastructure Leaders</h1>
+        <p>A vibrant community of aspiring civil engineers at NIT Durgapur, united in our passion for shaping the world through innovation, knowledge, and hands-on projects.</p>
+        <div className="hero-buttons">
+          <Link to='about' smooth={true} offset={-150} duration={500}>
+            <button className='btn btn-primary'>
+              <span>Explore More</span>
+              <img src={dark_arrow} alt="" />
+            </button>
+          </Link>
+          <Link to='contact' smooth={true} offset={-260} duration={500}>
+            <button className='btn btn-secondary'>
+              <span>Join Us</span>
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Hero

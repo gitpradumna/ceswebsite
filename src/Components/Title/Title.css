@@ -1,0 +1,56 @@
+.title{
+    text-align: center;
+    color: #B0B0B0;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 100px 0 48px;
+    transition: all 0.3s ease;
+}
+
+.title h1{
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #B0B0B0;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.title h2{
+    font-size: 48px;
+    color: #FFFFFF;
+    margin-top: 16px;
+    text-transform: none;
+    font-weight: 800;
+    line-height: 1.2;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1000px) {
+    .title {
+        margin: 80px 0 36px;
+    }
+    
+    .title h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        margin: 60px 0 28px;
+    }
+    
+    .title h1 {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+    
+    .title h2 {
+        font-size: 28px;
+    }
+}
