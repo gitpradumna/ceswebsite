@@ -9,13 +9,16 @@ import { Link as ScrollLink } from 'react-scroll';
 const Navbar = () => {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
+    const isTeamPage = location.pathname === '/team';
 
     const [sticky, setSticky] = useState(false);
 
     useEffect(()=>{
-        window.addEventListener('scroll', ()=>{
-            window.scrollY > 50 ? setSticky(true) : setSticky(false);
-        })
+      const handleScroll = () => {
+        setSticky(window.scrollY > 50);
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
     },[]);
 
 
@@ -24,9 +27,11 @@ const Navbar = () => {
       mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
     }
 
-  return (
+    return (
     <nav className={`container ${sticky? 'dark-nav' : ''}`}>
-      <RouterLink to="/"><img src={logo2} alt="CES Logo" className='logo' /></RouterLink>
+      <RouterLink to="/">
+        <img src={logo2} alt="CES Logo" className={`logo${sticky || isTeamPage ? ' logo-small' : ''}`} />
+      </RouterLink>
       <ul className={mobileMenu?'':'hide-mobile-menu'}>
         <li>
           <RouterLink to="/">

@@ -4,7 +4,7 @@ import About from '../../About/About';
 import Title from '../../Title/Title';
 import Programs from '../../Programs/Programs';
 import Campus from '../../Campus/Campus';
-import Testimonials from '../../Testimonials/Testimonials';
+import Team from '../Team/Team';
 import Contact from '../../Contact/Contact';
 import VideoPlayer from '../../VideoPlayer/VideoPlayer';
 import Announcements from '../../Announcements/Announcements';
@@ -24,8 +24,8 @@ const Home = () => {
         
         <Title subTitle='Gallery' title='Campus Photos' />
         <Campus />
-        <Title subTitle='Office Bearers' title='What They Say' />
-        <Testimonials />
+        <Title subTitle='Meet the Team' title='Our Team' />
+        <Team />
         <Title subTitle='Contact Us' title='Get in Touch' />
         <Contact />
       </div>

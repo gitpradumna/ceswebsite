@@ -1,5 +1,31 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Team.css';
+
+const teamSections = [
+  {
+    key: 'postBearer',
+    label: 'Post Bearers',
+    members: [
+      { name: 'Tanya Kumari', post: 'President', image: 'src/assets/tanya.jpg' },
+      { name: 'Anshika', post: 'General Secretary', image: 'src/assets/anshika.jpg' },
+      { name: 'Swapnil Ghosh', post: 'Assistant General Secretary', image: 'src/assets/swapnil.jpg' }
+    ]
+  },
+  {
+    key: 'fourthYear',
+    label: '4th Year',
+    members: [
+      { name: 'Sample 4th Year', post: 'Member', image: 'https://via.placeholder.com/120' }
+    ]
+  },
+  {
+    key: 'thirdYear',
+    label: '3rd Year',
+    members: [
+      { name: 'Sample 3rd Year', post: 'Member', image: 'https://via.placeholder.com/120' }
+    ]
+  }
+];
 
 const Team = () => {
   // Sample team data organized by categories - replace with actual data from backend
@@ -86,33 +112,66 @@ const Team = () => {
     ]
   };
 
-  return (
-    <div className="team-page">
-      <div className="team-hero">
-        <h1>Our Team</h1>
-        <p>Meet the dedicated individuals behind Civil Engineering Society</p>
-      </div>
+  const [activeIndex, setActiveIndex] = useState(0);
+  const sliderRef = useRef(null);
+  const btnsWrapperRef = useRef(null);
+  const [sliderStyle, setSliderStyle] = useState({ width: 120, left: 12 });
 
-      <div className="team-container">
-        {Object.entries(teamData).map(([category, members]) => (
-          <div key={category} className="team-category">
-            <h2 className="category-title">{category}</h2>
-            <div className="team-grid">
-              {members.map(member => (
-                <div key={member.id} className="team-card">
-                  <div className="team-image-wrapper">
-                    <img src={member.image} alt={member.name} />
-                  </div>
-                  <div className="team-info">
-                    <h3>{member.name}</h3>
-                    <p>{member.position}</p>
-                  </div>
-                </div>
-              ))}
+  useEffect(() => {
+    if (btnsWrapperRef.current) {
+      const btns = btnsWrapperRef.current.querySelectorAll('.team-tab-btn');
+      if (btns.length > 0 && btns[activeIndex]) {
+        const width = btns[activeIndex].offsetWidth;
+        const left = btns[activeIndex].offsetLeft;
+        setSliderStyle({ width, left });
+      }
+    }
+  }, [activeIndex]);
+
+  const renderSection = (section) => (
+    <div className="team-category" style={{ minWidth: '100%', boxSizing: 'border-box' }}>
+      <div className="team-grid">
+        {section.members.map((member, idx) => (
+          <div key={idx} className="team-card">
+            <div className="team-image-wrapper">
+              <img src={member.image} alt={member.name} />
+            </div>
+            <div className="team-info">
+              <h3>{member.name}</h3>
+              <p className="team-post">{member.post}</p>
             </div>
           </div>
         ))}
       </div>
+    </div>
+  );
+
+  return (
+    <div className="team-page">
+      <div className="team-tabs">
+        <div className="team-tab-btns-wrapper" ref={btnsWrapperRef}>
+          {teamSections.map((section, idx) => (
+            <button
+              key={section.key}
+              className={`team-tab-btn${activeIndex === idx ? ' active' : ''}`}
+              onClick={() => setActiveIndex(idx)}
+            >
+              {section.label}
+            </button>
+          ))}
+          <div
+            className="team-tab-slider-pill"
+            ref={sliderRef}
+            style={{
+              width: sliderStyle.width,
+              left: sliderStyle.left,
+              transition: 'left 0.3s cubic-bezier(.77,0,.18,1), width 0.3s cubic-bezier(.77,0,.18,1)',
+            }}
+          />
+        </div>
+      </div>
+
+      {renderSection(teamSections[activeIndex])}
     </div>
   );
 };

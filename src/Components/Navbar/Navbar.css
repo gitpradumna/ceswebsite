@@ -1,3 +1,30 @@
+@media (max-width: 600px) {
+    .logo {
+        width: 80px !important;
+        min-width: 60px !important;
+        margin-right: 12px;
+        transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+    .logo.logo-small {
+        width: 32px !important;
+        min-width: 24px !important;
+    }
+    nav.container {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+}
+@media (max-width: 600px) {
+    .logo {
+        width: 32px !important;
+        min-width: 24px !important;
+        margin-right: 12px;
+    }
+    nav.container {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+}
 nav{
     width: 100%;
     color: #fff;
@@ -22,12 +49,17 @@ nav.container {
     width: 100%;
 }
 
-.logo{
+ .logo{
     width: 140px;
     transition: all 0.3s ease;
     filter: brightness(1.1);
     z-index: 1001;
     position: relative;
+}
+.logo.logo-small {
+    width: 36px;
+    min-width: 28px;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 .logo:hover {
