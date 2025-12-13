@@ -12,15 +12,69 @@ import sauravImg from '../../assets/saurav.jpg';
 
 const ThirdYear = () => {
   const members = [
-    { name: 'Pradumna Mishra', post: 'Web Developer', image: pradumnaImg },
-    { name: 'Khapna Ronrang', post: 'Event Manager', image: khapnaImg },
-    { name: 'Samudrika Ghosh', post: 'Social Media Handler', image: samudrikaImg },
-    { name: 'Deekshitha Jannu', post: 'Graphic Designer', image: deekshitaImg },
-    { name: 'Anirban Koley', post: 'Content Writer', image: anirbanImg },
-    { name: 'Kartikey Shukla', post: 'Event Manager', image: kartikeyImg },
-    { name: 'Chandan Mondal', post: 'Event Manager', image: chandanImg },
-    { name: 'Apoorv Srivastava', post: 'Graphic Designer', image: apoorvImg },
-    { name: 'Saurav Suman', post: 'Event Manager', image: sauravImg },
+    { 
+      name: 'Pradumna Mishra', 
+      post: 'Web Developer', 
+      image: pradumnaImg,
+      linkedin: 'https://www.linkedin.com/in/pradumnamishra/',
+      instagram: 'https://www.instagram.com/itspradumna/'
+    },
+    { 
+      name: 'Khapna Ronrang', 
+      post: 'Event Manager', 
+      image: khapnaImg,
+      linkedin: 'https://www.linkedin.com/in/khapna-ronrang-517437331/',
+      instagram: 'https://www.instagram.com/kpna_02/'
+    },
+    { 
+      name: 'Samudrika Ghosh', 
+      post: 'Social Media Handler', 
+      image: samudrikaImg,
+      linkedin: 'https://www.linkedin.com/in/samudrika-ghosh-787b1033b/',
+      instagram: 'https://www.instagram.com/oyesam_12/'
+    },
+    { 
+      name: 'Deekshitha Jannu', 
+      post: 'Graphic Designer', 
+      image: deekshitaImg,
+      linkedin: 'https://www.linkedin.com/in/deekshitha-jannu-4169a42b8/',
+      instagram: ''
+    },
+    { 
+      name: 'Anirban Koley', 
+      post: 'Content Writer', 
+      image: anirbanImg,
+      linkedin: 'https://www.linkedin.com/in/anirban-koley-1b2330308/',
+      instagram: 'https://www.instagram.com/anirbaannn_1945/'
+    },
+    { 
+      name: 'Kartikey Shukla', 
+      post: 'Event Manager', 
+      image: kartikeyImg,
+      linkedin: '',
+      instagram: ''
+    },
+    { 
+      name: 'Chandan Mondal', 
+      post: 'Event Manager', 
+      image: chandanImg,
+      linkedin: '',
+      instagram: ''
+    },
+    { 
+      name: 'Apoorv Srivastava', 
+      post: 'Graphic Designer', 
+      image: apoorvImg,
+      linkedin: 'https://www.linkedin.com/in/apoorv-srivastava-236b85281/',
+      instagram: 'https://www.instagram.com/sri_apoorv_10/'
+    },
+    { 
+      name: 'Saurav Suman', 
+      post: 'Event Manager', 
+      image: sauravImg,
+      linkedin: 'https://www.linkedin.com/in/saurav-suman-a62592246/',
+      instagram: 'https://www.instagram.com/itz_saurav261/'
+    },
   ];
   return (
     <section className="team-subsection third-year">
@@ -34,12 +88,16 @@ const ThirdYear = () => {
               <h3>{member.name}</h3>
               <p className="team-post">{member.post}</p>
               <div className="team-card-social" style={{ marginTop: '0.5rem', display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="socialHover" aria-label="Instagram">
-                  <BsInstagram className="social-icon-prop" size={20} />
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="socialHover" aria-label="LinkedIn">
-                  <BsLinkedin className="social-icon-prop" size={20} />
-                </a>
+                {member.instagram && (
+                  <a href={member.instagram} target="_blank" rel="noopener noreferrer" className="socialHover" aria-label="Instagram">
+                    <BsInstagram className="social-icon-prop" size={20} />
+                  </a>
+                )}
+                {member.linkedin && (
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="socialHover" aria-label="LinkedIn">
+                    <BsLinkedin className="social-icon-prop" size={20} />
+                  </a>
+                )}
               </div>
             </div>
           </div>
