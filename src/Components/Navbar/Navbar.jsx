@@ -40,13 +40,13 @@ const Navbar = () => {
       </RouterLink>
       <ul className='desktop-menu'>
         <li onClick={closeMenu}>
-          <RouterLink to="/">
+          <RouterLink to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <h3>HOME</h3>
           </RouterLink>
         </li>
         <li onClick={closeMenu}>
           {isHomePage ? (
-            <ScrollLink to='program' smooth={true} offset={-260} duration={500}>
+            <ScrollLink to='program' smooth={true} offset={-80} duration={500}>
               <h3>EVENTS</h3>
             </ScrollLink>
           ) : (
@@ -67,7 +67,7 @@ const Navbar = () => {
         </li>
         <li onClick={closeMenu}>
           {isHomePage ? (
-            <ScrollLink to='team-section' smooth={true} offset={-120} duration={500}>
+            <ScrollLink to='team-section' smooth={true} offset={-80} duration={500}>
               <h3>TEAM</h3>
             </ScrollLink>
           ) : (
@@ -84,13 +84,13 @@ const Navbar = () => {
     <div className={`mobile-menu-overlay ${mobileMenu ? 'active' : ''}`}>
       <ul>
         <li onClick={closeMenu}>
-          <RouterLink to="/">
+          <RouterLink to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <h3>HOME</h3>
           </RouterLink>
         </li>
         <li onClick={closeMenu}>
           {isHomePage ? (
-            <ScrollLink to='program' smooth={true} offset={-260} duration={500}>
+            <ScrollLink to='program' smooth={true} offset={-80} duration={500}>
               <h3>EVENTS</h3>
             </ScrollLink>
           ) : (
@@ -111,7 +111,7 @@ const Navbar = () => {
         </li>
         <li onClick={closeMenu}>
           {isHomePage ? (
-            <ScrollLink to='team-section' smooth={true} offset={-120} duration={500}>
+            <ScrollLink to='team-section' smooth={true} offset={-80} duration={500}>
               <h3>TEAM</h3>
             </ScrollLink>
           ) : (
