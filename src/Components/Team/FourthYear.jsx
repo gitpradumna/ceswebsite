@@ -38,7 +38,6 @@ const FourthYear = () => {
   ];
   return (
     <section className="team-subsection fourth-year">
-      <h2>4th Year</h2>
       <div className="team-grid">
         {members.map((member, idx) => (
           <div key={idx} className="team-card">

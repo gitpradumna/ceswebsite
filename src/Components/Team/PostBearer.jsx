@@ -39,7 +39,6 @@ const PostBearer = () => {
   
   return (
     <section className="team-subsection post-bearer">
-      <h2>Post Bearer</h2>
       <div className="team-grid">
         {members.map((member, idx) => (
           <div key={idx} className="team-card">

@@ -56,13 +56,13 @@ const Navbar = () => {
           )}
         </li>
         <li onClick={closeMenu}>
-          <RouterLink to="/gallery">
-            <h3>GALLERY</h3>
+          <RouterLink to="/announcements">
+            <h3>ANNOUNCEMENTS</h3>
           </RouterLink>
         </li>
         <li onClick={closeMenu}>
-          <RouterLink to="/announcements">
-            <h3>ANNOUNCEMENTS</h3>
+          <RouterLink to="/gallery">
+            <h3>GALLERY</h3>
           </RouterLink>
         </li>
         <li onClick={closeMenu}>
@@ -100,13 +100,13 @@ const Navbar = () => {
           )}
         </li>
         <li onClick={closeMenu}>
-          <RouterLink to="/gallery">
-            <h3>GALLERY</h3>
+          <RouterLink to="/announcements">
+            <h3>ANNOUNCEMENTS</h3>
           </RouterLink>
         </li>
         <li onClick={closeMenu}>
-          <RouterLink to="/announcements">
-            <h3>ANNOUNCEMENTS</h3>
+          <RouterLink to="/gallery">
+            <h3>GALLERY</h3>
           </RouterLink>
         </li>
         <li onClick={closeMenu}>

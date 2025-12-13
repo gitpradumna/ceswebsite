@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Campus.css'
 import gallery_1 from '../../assets/gallery-1.png'
 import gallery_2 from '../../assets/gallery-2.png'
@@ -15,7 +16,9 @@ const Campus = () => {
         <img src={gallery_3} alt='campus-gallery' width={255} height={205} className='gallery-img' />
         <img src={gallery_4} alt='campus-gallery' width={255} height={205} className='gallery-img' />
       </div>
-      <button className='btn dark-btn'>See more here <img src={white_arrow} alt="" /></button>
+      <Link to="/gallery">
+        <button className='btn dark-btn'>See more here <img src={white_arrow} alt="" /></button>
+      </Link>
     </div>
   )
 }
