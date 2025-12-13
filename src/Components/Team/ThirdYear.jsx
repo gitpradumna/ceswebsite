@@ -1,18 +1,26 @@
 
 import { BsInstagram, BsLinkedin } from 'react-icons/bs';
-
+import pradumnaImg from '../../assets/pradumna.jpg';
+import khapnaImg from '../../assets/khapna.jpeg';
+import samudrikaImg from '../../assets/samudrika.jpg';
+import deekshitaImg from '../../assets/deekshita.jpg';
+import anirbanImg from '../../assets/anirban.jpg';
+import kartikeyImg from '../../assets/kartikey.jpg';
+import chandanImg from '../../assets/chandan.jpg';
+import apoorvImg from '../../assets/apoorv.jpg';
+import sauravImg from '../../assets/saurav.jpg';
 
 const ThirdYear = () => {
   const members = [
-    { name: 'Pradumna Mishra', post: 'Web Developer', image: '/src/assets/pradumna.jpg' },
-    { name: 'Khapna Ronrang', post: 'Event Manager', image: '/src/assets/khapna.jpeg' },
-    { name: 'Samudrika Ghosh', post: 'Social Media Handler', image: '/src/assets/samudrika.jpg' },
-    { name: 'Deekshitha Jannu', post: 'Graphic Designer', image: '/src/assets/deekshita.jpg' },
-    { name: 'Anirban Koley', post: 'Content Writer', image: '/src/assets/anirban.jpg' },
-    { name: 'Kartikey Shukla', post: 'Event Manager', image: '/src/assets/kartikey.jpg' },
-    { name: 'Chandan Mondal', post: 'Event Manager', image: '/src/assets/chandan.jpg' },
-    { name: 'Apoorv Srivastava', post: 'Graphic Designer', image: '/src/assets/apoorv.jpg' },
-    { name: 'Saurav Suman', post: 'Event Manager', image: '/src/assets/saurav.jpg' },
+    { name: 'Pradumna Mishra', post: 'Web Developer', image: pradumnaImg },
+    { name: 'Khapna Ronrang', post: 'Event Manager', image: khapnaImg },
+    { name: 'Samudrika Ghosh', post: 'Social Media Handler', image: samudrikaImg },
+    { name: 'Deekshitha Jannu', post: 'Graphic Designer', image: deekshitaImg },
+    { name: 'Anirban Koley', post: 'Content Writer', image: anirbanImg },
+    { name: 'Kartikey Shukla', post: 'Event Manager', image: kartikeyImg },
+    { name: 'Chandan Mondal', post: 'Event Manager', image: chandanImg },
+    { name: 'Apoorv Srivastava', post: 'Graphic Designer', image: apoorvImg },
+    { name: 'Saurav Suman', post: 'Event Manager', image: sauravImg },
   ];
   return (
     <section className="team-subsection third-year">

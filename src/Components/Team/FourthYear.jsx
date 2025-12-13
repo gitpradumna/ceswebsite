@@ -1,12 +1,16 @@
 
 import { BsInstagram, BsLinkedin } from 'react-icons/bs';
+import tanyaImg from '../../assets/tanya.jpg';
+import anshikaImg from '../../assets/anshika.jpg';
+import swapnilImg from '../../assets/swapnil.jpg';
+import hudsonImg from '../../assets/hudson.jpg';
 
 const FourthYear = () => {
   const members = [
-    { name: 'Tanya Kumari', post: 'President', image: '/src/assets/tanya.jpg' },
-    { name: 'Anshika', post: 'General Secretary', image: '/src/assets/anshika.jpg' },
-    { name: 'Swapnil Ghosh', post: 'Assistant General Secretary', image: '/src/assets/swapnil.jpg' },
-    { name: 'Ongwec Hudson', post: 'Senior Event Manager', image: '/src/assets/hudson.jpg' },
+    { name: 'Tanya Kumari', post: 'President', image: tanyaImg },
+    { name: 'Anshika', post: 'General Secretary', image: anshikaImg },
+    { name: 'Swapnil Ghosh', post: 'Assistant General Secretary', image: swapnilImg },
+    { name: 'Ongwec Hudson', post: 'Senior Event Manager', image: hudsonImg },
   ];
   return (
     <section className="team-subsection fourth-year">
