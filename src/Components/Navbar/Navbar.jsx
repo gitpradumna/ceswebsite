@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import logo2 from '../../assets/ces-logo.png'
-import menu_icon from '../../assets/menu-icon.png'
+import { HiMenuAlt3 } from 'react-icons/hi'
+import { IoClose } from 'react-icons/io5'
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -27,18 +28,23 @@ const Navbar = () => {
       mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
     }
 
+    const closeMenu = () => {
+      setMobileMenu(false);
+    }
+
     return (
+    <>
     <nav className={`container ${sticky? 'dark-nav' : ''}`}>
-      <RouterLink to="/">
+      <RouterLink to="/" onClick={closeMenu}>
         <img src={logo2} alt="CES Logo" className={`logo${sticky || isTeamPage ? ' logo-small' : ''}`} />
       </RouterLink>
-      <ul className={mobileMenu?'':'hide-mobile-menu'}>
-        <li>
+      <ul className='desktop-menu'>
+        <li onClick={closeMenu}>
           <RouterLink to="/">
             <h3>HOME</h3>
           </RouterLink>
         </li>
-        <li>
+        <li onClick={closeMenu}>
           {isHomePage ? (
             <ScrollLink to='program' smooth={true} offset={-260} duration={500}>
               <h3>EVENTS</h3>
@@ -49,24 +55,74 @@ const Navbar = () => {
             </RouterLink>
           )}
         </li>
-        <li>
+        <li onClick={closeMenu}>
           <RouterLink to="/gallery">
             <h3>GALLERY</h3>
           </RouterLink>
         </li>
-        <li>
-          <RouterLink to="/blog">
-            <h3>BLOG</h3>
+        <li onClick={closeMenu}>
+          <RouterLink to="/announcements">
+            <h3>ANNOUNCEMENTS</h3>
           </RouterLink>
         </li>
-        <li>
-          <RouterLink to="/team">
-            <h3>TEAM</h3>
-          </RouterLink>
+        <li onClick={closeMenu}>
+          {isHomePage ? (
+            <ScrollLink to='team-section' smooth={true} offset={-120} duration={500}>
+              <h3>TEAM</h3>
+            </ScrollLink>
+          ) : (
+            <RouterLink to="/team">
+              <h3>TEAM</h3>
+            </RouterLink>
+          )}
         </li>
       </ul>
-      <img src={menu_icon} alt="Menu" className='menu-icon' onClick={toggleMenu}/>
+      <div className='menu-icon' onClick={toggleMenu}>
+        {mobileMenu ? <IoClose size={32} /> : <HiMenuAlt3 size={32} />}
+      </div>
     </nav>
+    <div className={`mobile-menu-overlay ${mobileMenu ? 'active' : ''}`}>
+      <ul>
+        <li onClick={closeMenu}>
+          <RouterLink to="/">
+            <h3>HOME</h3>
+          </RouterLink>
+        </li>
+        <li onClick={closeMenu}>
+          {isHomePage ? (
+            <ScrollLink to='program' smooth={true} offset={-260} duration={500}>
+              <h3>EVENTS</h3>
+            </ScrollLink>
+          ) : (
+            <RouterLink to="/">
+              <h3>EVENTS</h3>
+            </RouterLink>
+          )}
+        </li>
+        <li onClick={closeMenu}>
+          <RouterLink to="/gallery">
+            <h3>GALLERY</h3>
+          </RouterLink>
+        </li>
+        <li onClick={closeMenu}>
+          <RouterLink to="/announcements">
+            <h3>ANNOUNCEMENTS</h3>
+          </RouterLink>
+        </li>
+        <li onClick={closeMenu}>
+          {isHomePage ? (
+            <ScrollLink to='team-section' smooth={true} offset={-120} duration={500}>
+              <h3>TEAM</h3>
+            </ScrollLink>
+          ) : (
+            <RouterLink to="/team">
+              <h3>TEAM</h3>
+            </RouterLink>
+          )}
+        </li>
+      </ul>
+    </div>
+    </>
   )
 }
 

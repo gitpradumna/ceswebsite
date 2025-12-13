@@ -1,5 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useLayoutEffect } from 'react';
+import { BsInstagram, BsLinkedin } from 'react-icons/bs';
 import './Team.css';
+import ThirdYear from '../../Team/ThirdYear';
+import FourthYear from '../../Team/FourthYear';
 
 const teamSections = [
   {
@@ -21,9 +24,7 @@ const teamSections = [
   {
     key: 'thirdYear',
     label: '3rd Year',
-    members: [
-      { name: 'Sample 3rd Year', post: 'Member', image: 'https://via.placeholder.com/120' }
-    ]
+    members: [] // Will render via ThirdYear component
   }
 ];
 
@@ -117,7 +118,7 @@ const Team = () => {
   const btnsWrapperRef = useRef(null);
   const [sliderStyle, setSliderStyle] = useState({ width: 120, left: 12 });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (btnsWrapperRef.current) {
       const btns = btnsWrapperRef.current.querySelectorAll('.team-tab-btn');
       if (btns.length > 0 && btns[activeIndex]) {
@@ -128,23 +129,39 @@ const Team = () => {
     }
   }, [activeIndex]);
 
-  const renderSection = (section) => (
-    <div className="team-category" style={{ minWidth: '100%', boxSizing: 'border-box' }}>
-      <div className="team-grid">
-        {section.members.map((member, idx) => (
-          <div key={idx} className="team-card">
-            <div className="team-image-wrapper">
-              <img src={member.image} alt={member.name} />
+  const renderSection = (section) => {
+    if (section.key === 'thirdYear') {
+      return <ThirdYear />;
+    }
+    if (section.key === 'fourthYear') {
+      return <FourthYear />;
+    }
+    return (
+      <div className="team-category" style={{ minWidth: '100%', boxSizing: 'border-box' }}>
+        <div className="team-grid">
+          {section.members.map((member, idx) => (
+            <div key={idx} className="team-card">
+              <div className="team-image-wrapper">
+                <img src={member.image} alt={member.name} />
+              </div>
+              <div className="team-info">
+                <h3>{member.name}</h3>
+                <p className="team-post">{member.post}</p>
+                <div className="team-card-social" style={{ marginTop: '0.5rem', display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="socialHover" aria-label="Instagram">
+                    <BsInstagram className="social-icon-prop" size={20} />
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="socialHover" aria-label="LinkedIn">
+                    <BsLinkedin className="social-icon-prop" size={20} />
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="team-info">
-              <h3>{member.name}</h3>
-              <p className="team-post">{member.post}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="team-page">

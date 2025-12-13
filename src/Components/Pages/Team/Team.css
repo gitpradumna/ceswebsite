@@ -23,11 +23,21 @@
     gap: 0.2rem;
     padding: 0.2rem 0.1rem;
     border-radius: 16px;
-    min-height: 32px;
+    overflow-x: hidden;
     width: 100%;
     box-sizing: border-box;
-    overflow-x: auto;
+    overflow-x: hidden;
+    flex-wrap: wrap;
     justify-content: flex-start;
+    max-width: 100vw;
+  }
+  .team-tab-btn {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.9rem;
+    min-width: 80px;
+    max-width: 120px;
+    white-space: nowrap;
+    box-sizing: border-box;
   }
   .team-tab-btn {
     padding: 0.4rem 0.7rem;
@@ -39,6 +49,8 @@
     height: 28px;
     border-radius: 16px;
     min-width: 80px;
+    max-width: 120px;
+    box-sizing: border-box;
   }
   .team-grid {
     gap: 0.7rem;
@@ -92,7 +104,7 @@
   .team-card {
     width: 40vw;
     max-width: 140px;
-    margin: 0 auto;
+    overflow-x: hidden;
   @media (max-width: 600px) {
     .team-card {
       width: 70vw;
@@ -134,15 +146,15 @@
 /* Tab buttons wrapper for pill style */
 .team-tab-btns-wrapper {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.4rem;
   position: relative;
-  min-height: 48px;
+  min-height: 56px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   background: #23272f;
-  border-radius: 32px;
-  padding: 0.5rem 0.5rem;
+  border-radius: 36px;
+  padding: 0.7rem 1rem;
   box-shadow: 0 2px 12px rgba(60,60,60,0.07);
   overflow-x: auto;
   max-width: 100vw;
@@ -150,7 +162,7 @@
 @media (max-width: 600px) {
   .team-tab-btns-wrapper {
     gap: 0.2rem;
-    padding: 0.2rem 0.1rem;
+    padding: 0.25rem 0.25rem;
     border-radius: 16px;
     min-height: 32px;
     width: 100%;
@@ -192,8 +204,8 @@
   background: transparent;
   border: none;
   outline: none;
-  padding: 0.6rem 1.3rem;
-  font-size: 0.98rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.05rem;
   color: #e0e6ed;
   font-weight: 500;
   font-family: 'Inter', 'Roboto', 'Segoe UI', Arial, sans-serif;
@@ -228,7 +240,7 @@
   position: absolute;
   top: 50%;
   left: 0;
-  height: 40px;
+  height: 44px;
   border-radius: 999px;
   background: linear-gradient(90deg, #bfc4cc 0%, #e0e3e8 100%);
   box-shadow: 0 4px 24px rgba(60,60,60,0.10);
@@ -285,6 +297,12 @@
   border-radius: 8px;
   border: 2px solid #e0e0e0;
 }
+
+/* Crop Saurav Suman's image from the bottom */
+.team-image-wrapper img[alt="Saurav Suman"] {
+  object-fit: cover;
+  object-position: center 100%;
+}
 .team-info h3 {
   margin-top: 0.75rem;
   font-size: 1.1rem;
@@ -318,8 +336,9 @@
 }
 .team-page {
   min-height: 100vh;
-    padding-top: 0;
+  padding-top: 0;
   background: #000000;
+  overflow-x: hidden;
 }
 
 .team-hero {

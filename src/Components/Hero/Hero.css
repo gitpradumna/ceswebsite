@@ -164,7 +164,8 @@
 
 @media (max-width: 768px){
     .hero {
-        min-height: 85vh;
+        min-height: 80vh;
+        padding-top: 60px;
     }
     
     .hero::before {
@@ -187,7 +188,7 @@
     }
     
     .hero-text h1{
-        font-size: 42px;
+        font-size: 40px;
     }
     
     .hero-text p {
@@ -207,8 +208,8 @@
 
 @media (max-width: 480px){
     .hero {
-        min-height: 100vh;
-        padding: 20px 5%;
+        height: 50vh;
+        padding: 16px 5% 20px;
         background-attachment: scroll; /* Better performance on mobile */
     }
     
@@ -228,7 +229,7 @@
     }
     
     .hero-text h1{
-        font-size: 36px;
+        font-size: 32px;
         margin-bottom: 16px;
         line-height: 1.2;
     }
@@ -252,5 +253,13 @@
         width: 100%;
         max-width: 280px;
         justify-content: center;
+    }
+}
+
+/* Compact hero when nav becomes sticky on small screens */
+@media (max-width: 768px) {
+    .dark-nav + .hero {
+        min-height: 50vh;
+        padding-top: 30px;
     }
 }

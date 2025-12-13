@@ -1,32 +1,33 @@
 import React from 'react';
 import './Announcements.css';
 
-const Announcements = () => {
-  // Sample announcements - replace with actual data from backend
-  const announcements = [
+const Announcements = ({
+  heading = 'Announcements',
+  subheading = 'Stay updated with latest news and events',
+  items
+}) => {
+  // Fallback sample data; replace with backend feed
+  const announcements = items && items.length ? items : [
     {
       id: 1,
       title: 'Workshop on Structural Design',
-      date: 'December 15, 2025',
+      date: 'Coming Soon',
       description: 'Join us for an intensive workshop on modern structural design principles and software.',
       type: 'workshop',
-      urgent: true
     },
     {
       id: 2,
       title: 'Annual General Meeting',
-      date: 'December 20, 2025',
+      date: 'Coming Soon',
       description: 'All members are requested to attend the AGM for important society updates.',
       type: 'meeting',
-      urgent: false
     },
     {
       id: 3,
       title: 'Technical Seminar Registration Open',
-      date: 'January 5, 2026',
+      date: 'Coming Soon',
       description: 'Register now for our upcoming technical seminar featuring industry experts.',
       type: 'event',
-      urgent: false
     },
   ];
 
@@ -42,8 +43,8 @@ const Announcements = () => {
   return (
     <div className="announcements-section">
       <div className="announcements-header">
-        <h2>Announcements</h2>
-        <p>Stay updated with latest news and events</p>
+        <h2>{heading}</h2>
+        <p>{subheading}</p>
       </div>
 
       <div className="announcements-list">
