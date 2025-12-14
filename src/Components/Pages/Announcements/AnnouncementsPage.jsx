@@ -30,12 +30,20 @@ const AnnouncementsPage = () => {
   ];
 
   const past = [
+    
     {
       id: 'p1',
       title: 'Freshers Party',
       date: 'Completed',
       description: 'Welcome celebration for the new batch with games, music, and introductions.',
       type: 'event'
+    },
+    {
+      id: 'p2',
+      title: 'Expert Talks ',
+      date: 'Completed',
+      description: 'Inspiring talks by Asmit Roy Burman on Structural Analysis using remote sensing.',
+      type: 'talk'
     }
   ];
 

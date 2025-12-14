@@ -12,6 +12,7 @@ const Contact = () => {
 
     const onSubmit = async (event) => {
       event.preventDefault();
+      
       setResult("Sending....");
       const formData = new FormData(event.target);
 
@@ -66,6 +67,7 @@ const Contact = () => {
             <input type="tel" name='phone' placeholder='Enter your mobile number' required/>
             <label>Write your messages here</label>
             <textarea name="message" rows="6" placeholder='Enter your message' required></textarea>
+            
             <button type='submit' className='btn dark-btn'>Submit now <img src={white_arrow} alt="" /></button>
 
 
