@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import logo2 from "../../assets/CES-logo copy.png";
 import {
@@ -86,15 +87,23 @@ export default function footer() {
         <
         li className = "footer_link" >
         <
-        a href = "/" > Home < /a> <
+        Link to = "/" > Home < /Link> <
         /li> <
         li className = "footer_link" >
         <
-        a href = "/event" > Events < /a> <
+        Link to = "/" > Events < /Link> <
         /li> <
         li className = "footer_link" >
         <
-        a href = "/team" > Team < /a> <
+        Link to = "/announcements" > Announcements < /Link> <
+        /li> <
+        li className = "footer_link" >
+        <
+        Link to = "/gallery" > Gallery < /Link> <
+        /li> <
+        li className = "footer_link" >
+        <
+        Link to = "/team" > Team < /Link> <
         /li>
 
         <

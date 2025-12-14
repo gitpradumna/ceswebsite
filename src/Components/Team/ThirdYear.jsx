@@ -9,6 +9,8 @@ import kartikeyImg from '../../assets/kartikey.jpg';
 import chandanImg from '../../assets/chandan.jpg';
 import apoorvImg from '../../assets/apoorv.jpg';
 import sauravImg from '../../assets/saurav.jpg';
+import alokImg from '../../assets/alok.jpeg';
+import surajImg from '../../assets/suraj.jpg';
 
 const ThirdYear = () => {
   const members = [
@@ -18,6 +20,13 @@ const ThirdYear = () => {
       image: pradumnaImg,
       linkedin: 'https://www.linkedin.com/in/pradumnamishra/',
       instagram: 'https://www.instagram.com/itspradumna/'
+    },
+    {
+      name: 'Alok Raj',
+      post: 'Graphic Designer',
+      image: alokImg,
+      linkedin: 'https://www.linkedin.com/in/alok-raj-55b36a28a/',
+      instagram: 'https://www.instagram.com/alok_raj0304/'
     },
     { 
       name: 'Khapna Ronrang', 
@@ -75,6 +84,13 @@ const ThirdYear = () => {
       linkedin: 'https://www.linkedin.com/in/saurav-suman-a62592246/',
       instagram: 'https://www.instagram.com/itz_saurav261/'
     },
+    {
+      name: 'Suraj Kumar',
+      post: 'Content Writer',
+      image: surajImg,
+      linkedin: 'www.linkedin.com/in/suraj-kumar-694a1535b',
+      instagram: 'https://www.instagram.com/samir_arya_1326/'
+    }
   ];
   return (
     <section className="team-subsection third-year">

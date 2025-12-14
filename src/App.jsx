@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './Components/Navbar/Navbar'
 import Footer from './Components/Footer/Footer'
+import ScrollToTop from './Components/ScrollToTop'
 import Home from './Components/Pages/Home/Home'
 import Gallery from './Components/Pages/Gallery/Gallery'
 import AnnouncementsPage from './Components/Pages/Announcements/AnnouncementsPage'
@@ -9,6 +10,7 @@ import AnnouncementsPage from './Components/Pages/Announcements/AnnouncementsPag
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div>
         <Navbar />
         <Routes>

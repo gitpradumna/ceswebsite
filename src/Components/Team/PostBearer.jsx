@@ -28,13 +28,6 @@ const PostBearer = () => {
       linkedin: 'https://www.linkedin.com/in/swapnil-ghosh-882349260/',
       instagram: 'https://www.instagram.com/__sickboy__sg18/'
     },
-    { 
-      name: 'Ongwec Hudson', 
-      post: 'Senior Event Manager', 
-      image: hudsonImg,
-      linkedin: 'https://www.linkedin.com/in/ongwec-hudson-0b1b49277/',
-      instagram: 'https://www.instagram.com/hudsonongwec/'
-    },
   ];
   
   return (
