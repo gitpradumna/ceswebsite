@@ -5,7 +5,7 @@ import khapnaImg from '../../assets/khapna.jpeg';
 import samudrikaImg from '../../assets/samudrika.jpg';
 import deekshitaImg from '../../assets/deekshita.jpg';
 import anirbanImg from '../../assets/anirban.jpg';
-import kartikeyImg from '../../assets/kartikey.jpg';
+import kartikeyImg from '../../assets/kartikeya.jpg';
 import chandanImg from '../../assets/chandan.jpg';
 import apoorvImg from '../../assets/apoorv.jpg';
 import sauravImg from '../../assets/saurav.jpg';
