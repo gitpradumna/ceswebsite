@@ -27,7 +27,6 @@ const About = ({setPlayState}) => {
       if (section) observer.observe(section)
     })
 
-    // Timeline scroll animation
     const handleScroll = () => {
       if (timelineRef.current) {
         const aboutSection = timelineRef.current.closest('.about')
@@ -42,7 +41,7 @@ const About = ({setPlayState}) => {
     }
 
     window.addEventListener('scroll', handleScroll)
-    handleScroll() // Initial call
+    handleScroll() 
 
     return () => {
       sectionsRef.current.forEach(section => {

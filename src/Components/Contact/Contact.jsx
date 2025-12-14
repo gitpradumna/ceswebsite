@@ -39,12 +39,24 @@ const Contact = () => {
     <div className='contact'>
       <div className="contact-col">
         <h3>Send us a message <img src={msg_icon} alt="" /></h3>
-        <p>Feel free to reach out through contact form or find our contact information below. Your feedback, questions, and suggestions are important to us as we strive to provide exceptional service to our university community.</p>
-        <ul>
-            <li><img src={mail_icon} alt="" />Contact@ev.9988@gmail.com</li>
-            <li><img src={phone_icon} alt="" />+91 123-456-7890</li>
-            <li><img src={location_icon} alt="" />123 Central Avenue, Durgapur, 713209<br/> West Bengal, India</li>
-        </ul>
+        <p>Feel free to reach out through contact form. Your feedback, questions, and suggestions are important to us as we strive to provide exceptional service to our university community.</p>
+        <div className="animated-illustration">
+          <div className="floating-circle circle-1"></div>
+          <div className="floating-circle circle-2"></div>
+          <div className="floating-circle circle-3"></div>
+          <div className="envelope-container">
+            <div className="envelope">
+              <div className="envelope-flap"></div>
+              <div className="envelope-body"></div>
+              <div className="letter"></div>
+            </div>
+          </div>
+          <div className="message-dots">
+            <span className="dot dot-1"></span>
+            <span className="dot dot-2"></span>
+            <span className="dot dot-3"></span>
+          </div>
+        </div>
       </div>
       <div className="contact-col">
         <form onSubmit={onSubmit}>

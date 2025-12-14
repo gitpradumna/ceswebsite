@@ -1,7 +1,7 @@
 import React from 'react'
 import './Hero.css'
-import dark_arrow from '../../assets/dark-arrow.png'
 import { Link } from 'react-scroll'
+import { HiArrowRight } from 'react-icons/hi2'
 
 const Hero = () => {
   return (
@@ -15,7 +15,7 @@ const Hero = () => {
           <Link to='about' smooth={true} offset={-150} duration={500}>
             <button className='btn btn-primary'>
               <span>Explore More</span>
-              <img src={dark_arrow} alt="" />
+              <HiArrowRight className="btn-arrow" />
             </button>
           </Link>
           <Link to='contact' smooth={true} offset={-260} duration={500}>

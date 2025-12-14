@@ -3,6 +3,7 @@ import './Team.css';
 import PostBearer from '../../Team/PostBearer';
 import ThirdYear from '../../Team/ThirdYear';
 import FourthYear from '../../Team/FourthYear';
+import FacultyAdvisor from '../../Team/FacultyAdvisor';
 
 const teamSections = [
   {
@@ -51,6 +52,8 @@ const Team = () => {
 
   return (
     <div className="team-page">
+      <FacultyAdvisor />
+      
       <div className="team-tabs">
         <div className="team-tab-btns-wrapper" ref={btnsWrapperRef}>
           {teamSections.map((section, idx) => (

@@ -6,8 +6,8 @@ const AnnouncementsPage = () => {
     {
       id: 'l1',
       title: 'Auditions',
-      date: 'Happening Now',
-      description: 'Auditions currently in progress. Join the venue or tune in to the stream.',
+      date: 'Happening Soon',
+      description: 'Auditions coming soon to the students. Join the venue or tune in to the stream.',
       type: 'event'
     }
   ];

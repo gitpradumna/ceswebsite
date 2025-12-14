@@ -11,6 +11,7 @@ import program2 from '../../../assets/program-2.png';
 import program3 from '../../../assets/program-3.png';
 import collegeVideo from '../../../assets/college-video.mp4';
 import nitdgpVideo from '../../../assets/nitdgp-video_gW7ApmeU.mp4';
+import expertTalks from '../../../assets/15AugExpertTalks.png';
 
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState('all');
@@ -28,6 +29,7 @@ const Gallery = () => {
     { id: 9, type: 'image', src: program3, title: 'Civil Engineering Event', category: 'events' },
     { id: 10, type: 'video', src: collegeVideo, thumbnail: gallery1, title: 'Campus Tour', category: 'campus' },
     { id: 11, type: 'video', src: nitdgpVideo, thumbnail: gallery2, title: 'NIT Durgapur Overview', category: 'campus' },
+    { id: 12, type: 'image', src: expertTalks, title: 'Expert Talks with Asmit Roy Burman', category: 'events' },
   ];
 
   const categories = ['all', 'campus', 'events'];

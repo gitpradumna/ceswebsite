@@ -138,9 +138,13 @@
     transform: translateY(-3px);
 }
 
-.hero .btn img {
-    width: 18px;
-    filter: brightness(0);
+.hero .btn-arrow {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.hero .btn:hover .btn-arrow {
+    transform: translateX(4px);
 }
 
 /* Floating elements */
