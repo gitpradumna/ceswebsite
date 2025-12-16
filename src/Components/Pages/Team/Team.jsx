@@ -1,15 +1,11 @@
 import React, { useState, useRef, useLayoutEffect } from 'react';
 import './Team.css';
-import PostBearer from '../../Team/PostBearer';
 import ThirdYear from '../../Team/ThirdYear';
 import FourthYear from '../../Team/FourthYear';
 import FacultyAdvisor from '../../Team/FacultyAdvisor';
+import Alumni from '../../Team/Alumni';
 
 const teamSections = [
-  {
-    key: 'postBearer',
-    label: 'Post Bearers'
-  },
   {
     key: 'fourthYear',
     label: '4th Year'
@@ -17,6 +13,10 @@ const teamSections = [
   {
     key: 'thirdYear',
     label: '3rd Year'
+  },
+  {
+    key: 'alumni',
+    label: 'Alumni'
   }
 ];
 
@@ -38,14 +38,14 @@ const Team = () => {
   }, [activeIndex]);
 
   const renderSection = (section) => {
-    if (section.key === 'postBearer') {
-      return <PostBearer />;
-    }
     if (section.key === 'thirdYear') {
       return <ThirdYear />;
     }
     if (section.key === 'fourthYear') {
       return <FourthYear />;
+    }
+    if (section.key === 'alumni') {
+      return <Alumni />;
     }
     return null;
   };

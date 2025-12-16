@@ -1,24 +1,117 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Campus.css'
 import gallery_1 from '../../assets/gallery-1.png'
 import gallery_2 from '../../assets/gallery-2.png'
 import gallery_3 from '../../assets/gallery-3.png'
 import gallery_4 from '../../assets/gallery-4.png'
+import heroImg from '../../assets/hero.png'
+import aboutImg from '../../assets/about.png'
+import program1 from '../../assets/program-1.png'
+import program2 from '../../assets/program-2.png'
 import white_arrow from '../../assets/white-arrow.png'
 
 const Campus = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [lightbox, setLightbox] = useState({ isOpen: false, imageIndex: 0 });
+
+  const images = [
+    { src: gallery_1, alt: 'Campus View 1' },
+    { src: gallery_2, alt: 'Campus View 2' },
+    { src: gallery_3, alt: 'Campus View 3' },
+    { src: gallery_4, alt: 'Campus View 4' },
+    { src: heroImg, alt: 'NIT Durgapur Campus' },
+    { src: aboutImg, alt: 'Campus Life' },
+    { src: program1, alt: 'Technical Workshop' },
+    { src: program2, alt: 'Engineering Seminar' },
+  ];
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  const handleImageClick = (index) => {
+    setLightbox({ isOpen: true, imageIndex: index });
+  };
+
+  const closeLightbox = () => {
+    setLightbox({ isOpen: false, imageIndex: 0 });
+  };
+
+  const handleNextImage = () => {
+    setLightbox(prev => ({
+      isOpen: true,
+      imageIndex: (prev.imageIndex + 1) % images.length
+    }));
+  };
+
+  const handlePrevImage = () => {
+    setLightbox(prev => ({
+      isOpen: true,
+      imageIndex: (prev.imageIndex - 1 + images.length) % images.length
+    }));
+  };
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!lightbox.isOpen) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') handleNextImage();
+      if (e.key === 'ArrowLeft') handlePrevImage();
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightbox.isOpen]);
+
   return (
     <div className='campus'>
-      <div className="gallery">
-        <img src={gallery_1} alt='campus-gallery' width={255} height={205} className='gallery-img' />
-        <img src={gallery_2} alt='campus-gallery' width={255} height={205} className='gallery-img' />
-        <img src={gallery_3} alt='campus-gallery' width={255} height={205} className='gallery-img' />
-        <img src={gallery_4} alt='campus-gallery' width={255} height={205} className='gallery-img' />
+      <div className="gallery-slider">
+        <div className="slider-container" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+          {images.map((image, index) => (
+            <div key={index} className="slide" onClick={() => handleImageClick(index)}>
+              <img src={image.src} alt={image.alt} className='gallery-img' />
+            </div>
+          ))}
+        </div>
+        
+        <div className="slider-dots">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              className={`dot ${currentSlide === index ? 'active' : ''}`}
+              onClick={() => setCurrentSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
+
       <Link to="/gallery">
-        <button className='btn dark-btn'>See more here <img src={white_arrow} alt="" /></button>
+        <button className='btn dark-btn'>Open Gallery <img src={white_arrow} alt="" /></button>
       </Link>
+
+      {/* Lightbox Modal */}
+      {lightbox.isOpen && (
+        <div className="lightbox-modal" onClick={closeLightbox}>
+          <button className="lightbox-nav lightbox-prev" onClick={(e) => { e.stopPropagation(); handlePrevImage(); }}>
+            ‹
+          </button>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img src={images[lightbox.imageIndex].src} alt={images[lightbox.imageIndex].alt} />
+            <h3 className="lightbox-title">{images[lightbox.imageIndex].alt}</h3>
+          </div>
+          <button className="lightbox-nav lightbox-next" onClick={(e) => { e.stopPropagation(); handleNextImage(); }}>
+            ›
+          </button>
+        </div>
+      )}
     </div>
   )
 }
