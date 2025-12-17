@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Gallery.css';
-import gallery1 from '../../../assets/gallery-1.png';
 import gallery2 from '../../../assets/gallery-2.png';
 import gallery3 from '../../../assets/gallery-3.png';
 import gallery4 from '../../../assets/gallery-4.png';
@@ -12,27 +11,30 @@ import program3 from '../../../assets/program-3.png';
 import collegeVideo from '../../../assets/college-video.mp4';
 import nitdgpVideo from '../../../assets/nitdgp-video_gW7ApmeU.mp4';
 import expertTalks from '../../../assets/15AugExpertTalks.png';
+import intersection from '../../../assets/h1-2intersection.jpg';
+import freshers25team from '../../../assets/freshersteam25.jpeg';
 
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState('all');
   const [lightbox, setLightbox] = useState({ isOpen: false, item: null });
 
   const galleryItems = [
-    { id: 1, type: 'image', src: gallery1, title: 'Campus View 1', category: 'campus' },
     { id: 2, type: 'image', src: gallery2, title: 'Campus View 2', category: 'campus' },
     { id: 3, type: 'image', src: gallery3, title: 'Campus View 3', category: 'campus' },
     { id: 4, type: 'image', src: gallery4, title: 'Campus View 4', category: 'campus' },
-    { id: 5, type: 'image', src: heroImg, title: 'NIT Durgapur', category: 'campus' },
-    { id: 6, type: 'image', src: aboutImg, title: 'Campus Life', category: 'campus' },
-    { id: 7, type: 'image', src: program1, title: 'Technical Workshop', category: 'events' },
-    { id: 8, type: 'image', src: program2, title: 'Engineering Seminar', category: 'events' },
-    { id: 9, type: 'image', src: program3, title: 'Civil Engineering Event', category: 'events' },
-    { id: 10, type: 'video', src: collegeVideo, thumbnail: gallery1, title: 'Campus Tour', category: 'campus' },
-    { id: 11, type: 'video', src: nitdgpVideo, thumbnail: gallery2, title: 'NIT Durgapur Overview', category: 'campus' },
-    { id: 12, type: 'image', src: expertTalks, title: 'Expert Talks with Asmit Roy Burman', category: 'events' },
+    { id: 5, type: 'image', src: intersection, title: 'Campus View 5', category: 'campus' },
+    { id: 6, type: 'image', src: heroImg, title: 'NIT Durgapur', category: 'campus' },
+    { id: 7, type: 'image', src: aboutImg, title: 'Campus Life', category: 'campus' },
+    { id: 8, type: 'image', src: freshers25team, title: '2025 Team', category: 'events' },
+    { id: 9, type: 'image', src: program1, title: 'Technical Workshop', category: 'events' },
+    { id: 10, type: 'image', src: program2, title: 'Engineering Seminar', category: 'events' },
+    { id: 11, type: 'image', src: program3, title: 'Civil Engineering Event', category: 'events' },
+    { id: 12, type: 'video', src: collegeVideo, thumbnail: gallery2, title: 'Campus Tour', category: 'videos' },
+    { id: 13, type: 'video', src: nitdgpVideo, thumbnail: gallery3, title: 'NIT Durgapur Overview', category: 'videos' },
+    { id: 14, type: 'image', src: expertTalks, title: 'Expert Talks with Asmit Roy Burman', category: 'events' },
   ];
 
-  const categories = ['all', 'campus', 'events'];
+  const categories = ['all', 'campus', 'events', 'videos'];
 
   const filteredItems = activeTab === 'all' 
     ? galleryItems 
@@ -96,8 +98,21 @@ const Gallery = () => {
               {item.type === 'image' ? (
                 <img src={item.src} alt={item.title} />
               ) : (
-                <div className="video-container">
+                <div className="video-container" style={{ position: 'relative' }}>
                   <video src={item.src} poster={item.thumbnail} />
+                  <span style={{
+                    position: 'absolute',
+                    top: 10,
+                    right: 10,
+                    background: 'rgba(0,0,0,0.7)',
+                    color: '#fff',
+                    padding: '4px 12px',
+                    borderRadius: '16px',
+                    fontSize: '13px',
+                    fontWeight: 700,
+                    letterSpacing: '1px',
+                    zIndex: 2
+                  }}>VIDEO</span>
                 </div>
               )}
               <div className="gallery-overlay">

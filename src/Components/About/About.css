@@ -21,6 +21,60 @@
 
 .about-left{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    height: 100%;
+    min-height: 1200px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.youtube-video-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.youtube-video {
+    width: 100%;
+    height: 350px;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 20px 60px rgba(0, 217, 255, 0.2);
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.320, 1);
+    background: #000;
+}
+
+.youtube-video:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 32px 80px rgba(0, 217, 255, 0.35);
+}
+
+.drone-video-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.drone-video {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 20px 60px rgba(0, 217, 255, 0.2);
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.320, 1);
+    background: #000;
+}
+
+.drone-video:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 32px 80px rgba(0, 217, 255, 0.35);
 }
 
 .about-right{
@@ -310,6 +364,15 @@
     
     .about-img {
         border-radius: 12px;
+    }
+    
+    .drone-video {
+        max-height: 250px;
+        border-radius: 12px;
+    }
+    
+    .drone-video-title {
+        font-size: 16px;
     }
     
     .play-icon {

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Campus.css'
-import gallery_1 from '../../assets/gallery-1.png'
 import gallery_2 from '../../assets/gallery-2.png'
 import gallery_3 from '../../assets/gallery-3.png'
 import gallery_4 from '../../assets/gallery-4.png'
@@ -16,11 +15,10 @@ const Campus = () => {
   const [lightbox, setLightbox] = useState({ isOpen: false, imageIndex: 0 });
 
   const images = [
-    { src: gallery_1, alt: 'Campus View 1' },
+    { src: heroImg, alt: 'NIT Durgapur Campus' },
     { src: gallery_2, alt: 'Campus View 2' },
     { src: gallery_3, alt: 'Campus View 3' },
     { src: gallery_4, alt: 'Campus View 4' },
-    { src: heroImg, alt: 'NIT Durgapur Campus' },
     { src: aboutImg, alt: 'Campus Life' },
     { src: program1, alt: 'Technical Workshop' },
     { src: program2, alt: 'Engineering Seminar' },

@@ -39,8 +39,11 @@ const Navbar = () => {
         <img src={logo2} alt="CES Logo" className={`logo${sticky || isTeamPage ? ' logo-small' : ''}`} />
       </RouterLink>
       <ul className='desktop-menu'>
-        <li onClick={closeMenu}>
-          <RouterLink to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <li onClick={() => {
+          closeMenu();
+          setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
+        }}>
+          <RouterLink to="/">
             <h3>HOME</h3>
           </RouterLink>
         </li>
@@ -84,7 +87,7 @@ const Navbar = () => {
     <div className={`mobile-menu-overlay ${mobileMenu ? 'active' : ''}`}>
       <ul>
         <li onClick={closeMenu}>
-          <RouterLink to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <RouterLink to="/">
             <h3>HOME</h3>
           </RouterLink>
         </li>

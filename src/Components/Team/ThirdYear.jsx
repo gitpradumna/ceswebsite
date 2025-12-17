@@ -11,6 +11,8 @@ import apoorvImg from '../../assets/apoorv.jpg';
 import sauravImg from '../../assets/saurav.jpg';
 import alokImg from '../../assets/alok.jpeg';
 import surajImg from '../../assets/suraj.jpg';
+import manishImg from '../../assets/manishkumar.jpg'
+import shikhaImg from '../../assets/shikhakumari.jpg'
 
 const ThirdYear = () => {
   const members = [
@@ -90,6 +92,20 @@ const ThirdYear = () => {
       image: surajImg,
       linkedin: 'www.linkedin.com/in/suraj-kumar-694a1535b',
       instagram: 'https://www.instagram.com/samir_arya_1326/'
+    },
+    {
+      name: 'Shikha Kumari Mallah',
+      post: 'Event Manager',
+      image: shikhaImg,
+      linkedin: 'https://www.linkedin.com/in/shikha-kumari-mallah-446b2224a/',
+      instagram: 'https://www.instagram.com/shikha.m.005'
+    },
+    {
+      name: 'Manish Kumar',
+      post: 'Event Manager',
+      image: manishImg,
+      linkedin: 'https://www.linkedin.com/in/manish-kumar-049840322',
+      instagram: 'https://www.instagram.com/m.yadav_a'
     }
   ];
   return (
