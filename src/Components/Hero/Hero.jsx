@@ -7,7 +7,11 @@ const Hero = () => {
   return (
     <div className='hero container'>
       <div className="hero-text">
-        <div className="hero-badge">Civil Engineering Society</div>
+        <div className="hero-badge">
+          <span className="badge-part">Civil Engineering Society</span>
+          <span className="badge-sep">•</span>
+          <span className="badge-part">NIT Durgapur</span>
+        </div>
         <h1>Building Tomorrow's</h1>
         <h1>Infrastructure Leaders</h1>
         <p>A vibrant community of aspiring civil engineers at NIT Durgapur, united in our passion for shaping the world through innovation, knowledge, and hands-on projects.</p>
