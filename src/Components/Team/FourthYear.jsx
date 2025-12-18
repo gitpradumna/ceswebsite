@@ -12,6 +12,8 @@ import dharmanaImg from '../../assets/dharmana.jpg'
 import deepsikaImg from '../../assets/deepsika.jpeg'
 import ankitaImg from '../../assets/ankita.jpg'
 import ambedkarImg from '../../assets/ambedkar.jpg'
+import supriyomondalImg from '../../assets/supriyomondal.jpg'
+import harshithaImg from '../../assets/vijayaharshitha.jpg'
 
 const FourthYear = () => {
   const members = [
@@ -79,11 +81,25 @@ const FourthYear = () => {
       instagram: 'https://www.instagram.com/deepsika_bishoye'
     },
     { 
+      name: 'Supriyo Mondal', 
+      post: 'Alumni affairs head', 
+      image: supriyomondalImg,
+      linkedin: 'https://www.linkedin.com/in/supriyo-mondal-886a58268',
+      instagram: 'https://www.instagram.com/supriyo7439'
+    },
+    { 
       name: 'Ankita Baidya', 
       post: 'Content Head', 
       image: ankitaImg,
       linkedin: 'https://www.linkedin.com/in/ankita-baidya-29374629b',
       instagram: 'https://www.instagram.com/u_x_blaxk'
+    },
+    { 
+      name: 'Vijaya Harshitha', 
+      post: 'Graphic designer', 
+      image: harshithaImg,
+      linkedin: 'https://www.linkedin.com/in/vijaya-harshitha-a2ba09288',
+      instagram: 'https://www.instagram.com/i_harshithachikkam/'
     },
     { 
       name: 'Ongwec Hudson', 

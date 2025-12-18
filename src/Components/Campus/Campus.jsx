@@ -6,8 +6,6 @@ import gallery_3 from '../../assets/gallery-3.png'
 import gallery_4 from '../../assets/gallery-4.png'
 import heroImg from '../../assets/hero.png'
 import aboutImg from '../../assets/about.png'
-import program1 from '../../assets/program-1.png'
-import program2 from '../../assets/program-2.png'
 import white_arrow from '../../assets/white-arrow.png'
 
 const Campus = () => {
@@ -20,8 +18,6 @@ const Campus = () => {
     { src: gallery_3, alt: 'Campus View 3' },
     { src: gallery_4, alt: 'Campus View 4' },
     { src: aboutImg, alt: 'Campus Life' },
-    { src: program1, alt: 'Technical Workshop' },
-    { src: program2, alt: 'Engineering Seminar' },
   ];
 
   // Auto-slide functionality

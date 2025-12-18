@@ -13,6 +13,7 @@ import alokImg from '../../assets/alok.jpeg';
 import surajImg from '../../assets/suraj.jpg';
 import manishImg from '../../assets/manishkumar.jpg'
 import shikhaImg from '../../assets/shikhakumari.jpg'
+import asthaImg from '../../assets/astha.jpg'
 
 const ThirdYear = () => {
   const members = [
@@ -94,6 +95,13 @@ const ThirdYear = () => {
       instagram: 'https://www.instagram.com/samir_arya_1326/'
     },
     {
+      name: 'Manish Kumar',
+      post: 'Event Manager',
+      image: manishImg,
+      linkedin: 'https://www.linkedin.com/in/manish-kumar-049840322',
+      instagram: 'https://www.instagram.com/m.yadav_a'
+    },
+    {
       name: 'Shikha Kumari Mallah',
       post: 'Event Manager',
       image: shikhaImg,
@@ -101,12 +109,12 @@ const ThirdYear = () => {
       instagram: 'https://www.instagram.com/shikha.m.005'
     },
     {
-      name: 'Manish Kumar',
+      name: 'Astha Kumari',
       post: 'Event Manager',
-      image: manishImg,
-      linkedin: 'https://www.linkedin.com/in/manish-kumar-049840322',
-      instagram: 'https://www.instagram.com/m.yadav_a'
-    }
+      image: asthaImg,
+      linkedin: '',
+      instagram: 'https://www.instagram.com/astha_9994'
+    },
   ];
   return (
     <section className="team-subsection third-year">
