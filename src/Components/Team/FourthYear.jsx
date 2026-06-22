@@ -1,123 +1,122 @@
-
 import { BsInstagram, BsLinkedin } from 'react-icons/bs';
-import tanyaImg from '../../assets/tanya.jpg';
-import anshikaImg from '../../assets/anshika.jpg';
-import swapnilImg from '../../assets/swapnil.jpg';
-import hudsonImg from '../../assets/hudson.jpg';
-import supriyaImg from '../../assets/supriya.jpg'
-import vineetImg from '../../assets/vineet.jpg'
-import tejasImg from '../../assets/tejas.jpg'
-import poornachandraImg from '../../assets/poornachandra.JPG'
-import dharmanaImg from '../../assets/dharmana.jpg'
-import deepsikaImg from '../../assets/deepsika.jpeg'
-import ankitaImg from '../../assets/ankita.jpg'
-import ambedkarImg from '../../assets/ambedkar.jpg'
-import supriyomondalImg from '../../assets/supriyomondal.jpg'
-import harshithaImg from '../../assets/vijayaharshitha.jpg'
+import pradumnaImg from '../../assets/pradumna.jpg';
+import khapnaImg from '../../assets/khapna.jpeg';
+import samudrikaImg from '../../assets/samudrika.jpg';
+import deekshitaImg from '../../assets/deekshita.jpg';
+import anirbanImg from '../../assets/anirban.jpg';
+import kartikeyImg from '../../assets/kartikeya.jpg';
+import chandanImg from '../../assets/chandan.jpg';
+import apoorvImg from '../../assets/apoorv.webp';
+import sauravImg from '../../assets/saurav.jpg';
+import alokImg from '../../assets/alok.jpeg';
+import surajImg from '../../assets/suraj.jpg';
+import manishImg from '../../assets/manishkumar.jpg'
+import shikhaImg from '../../assets/shikhakumari.jpg'
+import asthaImg from '../../assets/astha.jpg'
 
 const FourthYear = () => {
   const members = [
     { 
-      name: 'Tanya Kumari', 
+      name: 'Kartikey Shukla', 
       post: 'President', 
-      image: tanyaImg,
-      linkedin: 'https://www.linkedin.com/in/iamtanyakumari/',
+      image: kartikeyImg,
+      linkedin: '',
       instagram: ''
     },
     { 
-      name: 'Supriya Roy ', 
+      name: 'Samudrika Ghosh', 
       post: 'Vice President', 
-      image: supriyaImg,
-      linkedin: 'https://www.linkedin.com/in/supriya-roy-8872422a5',
-      instagram: 'https://www.instagram.com/supriyaroy4245'
+      image: samudrikaImg,
+      linkedin: 'https://www.linkedin.com/in/samudrika-ghosh-787b1033b/',
+      instagram: 'https://www.instagram.com/oyesam_12/'
+    },
+    {
+      name: 'Alok Raj',
+      post: 'General Secretary',
+      image: alokImg,
+      linkedin: 'https://www.linkedin.com/in/alok-raj-55b36a28a/',
+      instagram: 'https://www.instagram.com/alok_raj0304/'
+    },
+    {
+      name: 'Shikha Kumari Mallah',
+      post: 'Assistant General Secretary',
+      image: shikhaImg,
+      linkedin: 'https://www.linkedin.com/in/shikha-kumari-mallah-446b2224a/',
+      instagram: 'https://www.instagram.com/shikha.m.005'
     },
     { 
-      name: 'Anshika', 
-      post: 'General Secretary', 
-      image: anshikaImg,
-      linkedin: 'https://www.linkedin.com/in/anshika-a89083395/',
-      instagram: 'https://www.instagram.com/953_anshika/'
+      name: 'Apoorv Srivastava', 
+      post: 'Treasurer', 
+      image: apoorvImg,
+      linkedin: 'https://www.linkedin.com/in/apoorv-srivastava-236b85281/',
+      instagram: 'https://www.instagram.com/sri_apoorv_10/'
+    },
+    {
+      name: 'Astha Kumari',
+      post: 'Convenor',
+      image: asthaImg,
+      linkedin: '',
+      instagram: 'https://www.instagram.com/astha_9994'
     },
     { 
-      name: 'Swapnil Ghosh', 
-      post: 'Assistant General Secretary', 
-      image: swapnilImg,
-      linkedin: 'https://www.linkedin.com/in/swapnil-ghosh-882349260/',
-      instagram: 'https://www.instagram.com/__sickboy__sg18/'
+      name: 'Pradumna Mishra', 
+      post: 'Head Web Development', 
+      image: pradumnaImg,
+      linkedin: 'https://www.linkedin.com/in/pradumnamishra/',
+      instagram: 'https://www.instagram.com/itspradumna/'
     },
     { 
-      name: 'Tejas Kumar', 
-      post: 'Convenor', 
-      image: tejasImg,
-      linkedin: 'https://www.linkedin.com/in/tejas-kumar-8b0b2525a',
+      name: 'Khapna Ronrang', 
+      post: 'Sponsorship Head', 
+      image: khapnaImg,
+      linkedin: 'https://www.linkedin.com/in/khapna-ronrang-517437331/',
+      instagram: 'https://www.instagram.com/kpna_02/'
+    },
+    { 
+      name: 'Deekshitha Jannu', 
+      post: 'Sponsorship Head', 
+      image: deekshitaImg,
+      linkedin: 'https://www.linkedin.com/in/deekshitha-jannu-4169a42b8/',
       instagram: ''
     },
-    { 
-      name: 'K.Poorna Chandra',
-      post: 'Graphic Design head',
-      image: poornachandraImg,
-      linkedin: 'https://www.linkedin.com/in/poorna-chandra-kollati-5b2b172a5/',
-      instagram: 'https://www.instagram.com/poorna_chandra_k_'
+    {
+      name: 'Manish Kumar',
+      post: 'Event Head',
+      image: manishImg,
+      linkedin: 'https://www.linkedin.com/in/manish-kumar-049840322',
+      instagram: 'https://www.instagram.com/m.yadav_a'
     },
     { 
-      name: 'Ambedkar Kumar ',
-      post: 'Graphic Design head',
-      image: ambedkarImg,
-      linkedin: 'https://www.linkedin.com/in/ambedkar-kumar-9a3177384',
-      instagram: 'https://www.instagram.com/ambed_87'
+      name: 'Saurav Suman', 
+      post: 'Event Head', 
+      image: sauravImg,
+      linkedin: 'https://www.linkedin.com/in/saurav-suman-a62592246/',
+      instagram: 'https://www.instagram.com/itz_saurav261/'
     },
     { 
-      name: 'Dharmana Eswar sai', 
-      post: 'Head Web Development', 
-      image: dharmanaImg,
-      linkedin: 'https://www.linkedin.com/in/eswar-sai-dharmana-9b8049261',
-      instagram: 'https://www.instagram.com/eswarxdharmana'
+      name: 'Anirban Koley', 
+      post: 'Alumni Interaction Head', 
+      image: anirbanImg,
+      linkedin: 'https://www.linkedin.com/in/anirban-koley-1b2330308/',
+      instagram: 'https://www.instagram.com/anirbaannn_1945/'
     },
     { 
-      name: 'Deepsika bishoye', 
-      post: 'Sponsorship Head', 
-      image: deepsikaImg,
-      linkedin: 'https://www.linkedin.com/in/deepsika-bishoye-946737284',
-      instagram: 'https://www.instagram.com/deepsika_bishoye'
+      name: 'Chandan Mondal', 
+      post: 'Alumni Interaction Head', 
+      image: chandanImg,
+      linkedin: '',
+      instagram: ''
     },
-    { 
-      name: 'Supriyo Mondal', 
-      post: 'Alumni affairs head', 
-      image: supriyomondalImg,
-      linkedin: 'https://www.linkedin.com/in/supriyo-mondal-886a58268',
-      instagram: 'https://www.instagram.com/supriyo7439'
-    },
-    { 
-      name: 'Ankita Baidya', 
-      post: 'Content Head', 
-      image: ankitaImg,
-      linkedin: 'https://www.linkedin.com/in/ankita-baidya-29374629b',
-      instagram: 'https://www.instagram.com/u_x_blaxk'
-    },
-    { 
-      name: 'Vijaya Harshitha', 
-      post: 'Graphic designer', 
-      image: harshithaImg,
-      linkedin: 'https://www.linkedin.com/in/vijaya-harshitha-a2ba09288',
-      instagram: 'https://www.instagram.com/i_harshithachikkam/'
-    },
-    { 
-      name: 'Ongwec Hudson', 
-      post: 'Senior Event Manager', 
-      image: hudsonImg,
-      linkedin: 'https://www.linkedin.com/in/ongwec-hudson-0b1b49277/',
-      instagram: 'https://www.instagram.com/hudsonongwec/'
-    },
-    { 
-      name: 'Vineet Bhagat ', 
-      post: 'Senior Event Manager', 
-      image: vineetImg,
-      linkedin: 'https://www.linkedin.com/in/vineet-bhagat-6378b919a',
-      instagram: 'https://www.instagram.com/vineet_3046'
+    {
+      name: 'Suraj Kumar',
+      post: 'Content Head',
+      image: surajImg,
+      linkedin: 'www.linkedin.com/in/suraj-kumar-694a1535b',
+      instagram: 'https://www.instagram.com/samir_arya_1326/'
     },
   ];
   return (
-    <section className="team-subsection fourth-year">
+    <section className="team-subsection third-year">
       <div className="team-grid">
         {members.map((member, idx) => (
           <div key={idx} className="team-card">

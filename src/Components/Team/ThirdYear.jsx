@@ -1,119 +1,126 @@
-
 import { BsInstagram, BsLinkedin } from 'react-icons/bs';
-import pradumnaImg from '../../assets/pradumna.jpg';
-import khapnaImg from '../../assets/khapna.jpeg';
-import samudrikaImg from '../../assets/samudrika.jpg';
-import deekshitaImg from '../../assets/deekshita.jpg';
-import anirbanImg from '../../assets/anirban.jpg';
-import kartikeyImg from '../../assets/kartikeya.jpg';
-import chandanImg from '../../assets/chandan.jpg';
-import apoorvImg from '../../assets/apoorv.jpg';
-import sauravImg from '../../assets/saurav.jpg';
-import alokImg from '../../assets/alok.jpeg';
-import surajImg from '../../assets/suraj.jpg';
-import manishImg from '../../assets/manishkumar.jpg'
-import shikhaImg from '../../assets/shikhakumari.jpg'
-import asthaImg from '../../assets/astha.jpg'
+import abhishekImg from '../../assets/abhishekSah.jpg';
+import akashSinghImg from '../../assets/akashSingh.jpg';
+import amarKumarImg from '../../assets/AmarKumarDas.jpg';
+import bhashwarNandiImg from '../../assets/bhashwarNandi.png';
+import gandharImg from '../../assets/gandharGautam.jpeg';
+import pijushMandalImg from '../../assets/pijushMandal.jpg';
+import prithvishImg from '../../assets/prithvish.jpg';
+import rahulRudraImg from '../../assets/rahulRudra.webp';
+import sanketImg from '../../assets/sanket.jpg';
+import shreshthaImg from '../../assets/shreshtha.jpg';
+import sinjiniImg from '../../assets/sinjini.jpeg';
+import srinivasImg from '../../assets/srinivas.jpeg';
+import sukanyaImg from '../../assets/sukanya.jpeg';
+import tharunImg from '../../assets/tharun.jpg';
+import vishalPalImg from '../../assets/vishalPal.jpeg';
 
 const ThirdYear = () => {
   const members = [
     { 
-      name: 'Pradumna Mishra', 
-      post: 'Web Developer', 
-      image: pradumnaImg,
-      linkedin: 'https://www.linkedin.com/in/pradumnamishra/',
-      instagram: 'https://www.instagram.com/itspradumna/'
-    },
-    {
-      name: 'Alok Raj',
-      post: 'Graphic Designer',
-      image: alokImg,
-      linkedin: 'https://www.linkedin.com/in/alok-raj-55b36a28a/',
-      instagram: 'https://www.instagram.com/alok_raj0304/'
-    },
-    { 
-      name: 'Khapna Ronrang', 
-      post: 'Event Manager', 
-      image: khapnaImg,
-      linkedin: 'https://www.linkedin.com/in/khapna-ronrang-517437331/',
-      instagram: 'https://www.instagram.com/kpna_02/'
-    },
-    { 
-      name: 'Samudrika Ghosh', 
+      name: 'Shreshtha', 
       post: 'Social Media Handler', 
-      image: samudrikaImg,
-      linkedin: 'https://www.linkedin.com/in/samudrika-ghosh-787b1033b/',
-      instagram: 'https://www.instagram.com/oyesam_12/'
+      image: shreshthaImg,
+      linkedin: 'https://www.linkedin.com/in/shreshtha-nitd-civil?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+      instagram: 'https://www.instagram.com/shreshtha.ltd?igsh=MXBmNjR5OHlvaHVjcA=='
     },
     { 
-      name: 'Deekshitha Jannu', 
-      post: 'Graphic Designer', 
-      image: deekshitaImg,
-      linkedin: 'https://www.linkedin.com/in/deekshitha-jannu-4169a42b8/',
-      instagram: ''
+      name: 'M D S Srinivasa Kashyap', 
+      post: 'Social Media Handler', 
+      image: srinivasImg,
+      linkedin: 'https://www.linkedin.com/in/m-d-s-srinivasa-kashyap-1b6a2a3a9?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+      instagram: 'https://www.instagram.com/shanmukha_srinivas_machavaram?utm_source=qr&igsh=MXJkdzMwOW82a3h6MA=='
     },
     { 
-      name: 'Anirban Koley', 
-      post: 'Content Writer', 
-      image: anirbanImg,
-      linkedin: 'https://www.linkedin.com/in/anirban-koley-1b2330308/',
-      instagram: 'https://www.instagram.com/anirbaannn_1945/'
+      name: 'Sukanya Paul', 
+      post: 'Web + Content', 
+      image: sukanyaImg,
+      linkedin: 'https://www.linkedin.com/in/khapna-ronrang-517437331/',
+      instagram: 'https://www.instagram.com/_.chaotic_life._?igsh=ejlxbHowc2xyNml5'
     },
     { 
-      name: 'Kartikey Shukla', 
-      post: 'Event Manager', 
-      image: kartikeyImg,
+      name: 'Sinjini Haldar', 
+      post: '', 
+      image: sinjiniImg,
       linkedin: '',
       instagram: ''
     },
     { 
-      name: 'Chandan Mondal', 
-      post: 'Event Manager', 
-      image: chandanImg,
+      name: 'Prithvish Chakraborty', 
+      post: '', 
+      image: prithvishImg,
+      linkedin: 'https://www.linkedin.com/in/prithvish-chakraborty?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      instagram: ''
+    },
+    { 
+      name: 'Bhashwar Nandi', 
+      post: '', 
+      image: bhashwarNandiImg,
+      linkedin: 'https://www.linkedin.com/in/bhashwar-nandi-3274bb39b?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+      instagram: 'https://www.instagram.com/bhas_hwar6?igsh=YWlhOG5rMDJlZHN0'
+    },
+    { 
+      name: 'Rahul Rudra', 
+      post: 'Web Developer', 
+      image: rahulRudraImg,
+      linkedin: 'https://www.linkedin.com/in/rahul-rudra-469918324?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+      instagram: 'https://www.instagram.com/rudra_r_45.0/'
+    },
+    { 
+      name: 'Sanket Chell', 
+      post: '', 
+      image: sanketImg,
+      linkedin: 'https://www.linkedin.com/in/sanket-chell-1bb877338',
+      instagram: ''
+    },
+    { 
+      name: 'Pijush Mandal', 
+      post: '', 
+      image: pijushMandalImg,
+      linkedin: 'https://www.linkedin.com/in/pijush-mandal',
+      instagram: 'https://www.instagram.com/pijushm_03?igsh=MTJsa2lxcDlkMndmcg=='
+    },
+    { 
+      name: 'Gandhar Gautam', 
+      post: '', 
+      image: gandharImg,
+      linkedin: 'https://www.linkedin.com/in/gandhar-gautam-ab6377335?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
+      instagram: 'https://www.instagram.com/_rishii32?igsh=a25pdXVxbGhxaWQw&utm_source=qr'
+    },
+    { 
+      name: 'Amar Kumar Das', 
+      post: '', 
+      image: amarKumarImg,
+      linkedin: 'https://www.linkedin.com/in/amar-kumar-das-989653340',
+      instagram: 'https://www.instagram.com/amarkumardas_/'
+    },
+    { 
+      name: 'Aakash Kumar Singh', 
+      post: '', 
+      image: akashSinghImg,
       linkedin: '',
       instagram: ''
     },
     { 
-      name: 'Apoorv Srivastava', 
-      post: 'Graphic Designer', 
-      image: apoorvImg,
-      linkedin: 'https://www.linkedin.com/in/apoorv-srivastava-236b85281/',
-      instagram: 'https://www.instagram.com/sri_apoorv_10/'
+      name: 'Abhishek Sah', 
+      post: '', 
+      image: abhishekImg,
+      linkedin: 'https://www.linkedin.com/in/abhishek-sah-259b53311?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+      instagram: 'https://www.instagram.com/abhisheksah2025?igsh=MjJpOXl3Z29taTZj'
     },
     { 
-      name: 'Saurav Suman', 
-      post: 'Event Manager', 
-      image: sauravImg,
-      linkedin: 'https://www.linkedin.com/in/saurav-suman-a62592246/',
-      instagram: 'https://www.instagram.com/itz_saurav261/'
+      name: 'Vishal Pal', 
+      post: '', 
+      image: vishalPalImg,
+      linkedin: 'http://www.linkedin.com/in/vishal-pal-465233325',
+      instagram: 'https://www.instagram.com/arjuna6170/'
     },
     {
-      name: 'Suraj Kumar',
-      post: 'Content Writer',
-      image: surajImg,
-      linkedin: 'www.linkedin.com/in/suraj-kumar-694a1535b',
-      instagram: 'https://www.instagram.com/samir_arya_1326/'
-    },
-    {
-      name: 'Manish Kumar',
-      post: 'Event Manager',
-      image: manishImg,
-      linkedin: 'https://www.linkedin.com/in/manish-kumar-049840322',
-      instagram: 'https://www.instagram.com/m.yadav_a'
-    },
-    {
-      name: 'Shikha Kumari Mallah',
-      post: 'Event Manager',
-      image: shikhaImg,
-      linkedin: 'https://www.linkedin.com/in/shikha-kumari-mallah-446b2224a/',
-      instagram: 'https://www.instagram.com/shikha.m.005'
-    },
-    {
-      name: 'Astha Kumari',
-      post: 'Event Manager',
-      image: asthaImg,
+      name: 'Dasari Tharun',
+      post: '',
+      image: tharunImg,
       linkedin: '',
-      instagram: 'https://www.instagram.com/astha_9994'
+      instagram: 'https://www.instagram.com/mr_tharun_2603?igsh=MXI2dGx5NzMzbTVrMQ=='
     },
   ];
   return (
